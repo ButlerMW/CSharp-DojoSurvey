@@ -1,0 +1,61 @@
+@using DojoSurvey.Models
+@model User
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Survey Index</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-2">
+            <h2 style="text-decoration:underline">Submitted Info</h2>
+        </div>
+
+        <div class="row my-2 mt-5">
+            <div class="col-2">
+                <p>Name:</p>
+            </div>
+            <div class="col">
+                <p>@Model.Name</p>
+            </div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col-2">
+                <p>Dojo Location:</p>
+            </div>
+            <div class="col-1">
+                <p>@Model.Location</p>
+            </div>
+        </div>
+
+        <div class="row my-2">
+            <div class="col-2">
+                <p>Favorite Language:</p>
+            </div>
+            <div class="col-1">
+                <p>@Model.Language</p>
+            </div>  
+        </div>
+
+        <div class="row my-2">
+            <div class="col-2">
+                <p>Comment:</p>
+            </div>
+            <div class="col-1">
+                <p>@Model.Comment</p>
+            </div>
+        </div>
+           
+        <div class="row my-2 flex-d justify-content-center">
+            <form action="/">
+                <button class="btn btn-info" type="submit">Go Back</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
