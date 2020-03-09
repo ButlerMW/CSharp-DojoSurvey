@@ -10,18 +10,12 @@
 </head>
 <body>
     <div class="border container text-center">
+
         <div class="row">
             <span style="color:red"asp-validation-for="Name"></span>
-        </div>
-        <div class="row">
-            <span style="color:red"asp-validation-for="Location"></span>
-        </div>
-        <div class="row">
-            <span style="color:red"asp-validation-for="Language"></span>
-        </div>
-        <div class="row">
             <span style="color:red"asp-validation-for="Comment"></span>
         </div>
+
         <div class="col">
             <form asp-action="result" method="POST">
                 <div class="row my-2">
@@ -39,6 +33,7 @@
                     </div>
                     <div class="col-2">
                         <select name="location">
+                            <option disabled>Select Location</option>
                             <option value="seattle">Seattle</option>
                             <option value="sanjose">San Jose</option>
                             <option value="la">LA</option>
@@ -59,6 +54,7 @@
                     </div>
                     <div class="col-2">
                         <select asp-for="Language">
+                            <option disabled>Select Language</option>
                             <option value="java">Java</option>
                             <option value="python">Python</option>
                             <option value="cs">C#/.NET</option>
